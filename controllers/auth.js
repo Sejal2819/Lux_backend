@@ -59,7 +59,7 @@ const tokenAndUserResponse = (req, res, user) => {
       const token = jwt.sign({ email, password }, process.env.JWT_SECRET, {
         expiresIn: "1h",
       });
-  
+   console.log('ToKEN:',token)
       config.AWSSES.sendEmail(
         emailTemplate(
           email,
